@@ -1,0 +1,30 @@
+plugins {
+    id 'java-library'
+    id 'application'
+    id "com.github.kamatama41.git-release" version "0.3.0"
+}
+
+group = 'io.github.usbharu'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClassName = 'MainKt'
+}
+
+gitRelease {
+    groupId = "io.github.usbharu"
+    artifactId = "yt-dlp-java"
+    repoUri = "https://github.com/usbharu/maven-repository.git"
+}
