@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ProcessBroker {
-    private final List<String> command = new ArrayList<String>();
+    private final List<String> command = new ArrayList<>();
     private final StringBuilder stdout = new StringBuilder();
     private final StringBuilder stderr = new StringBuilder();
 
@@ -56,7 +56,7 @@ public class ProcessBroker {
 
       private void readStream(InputStream inputStream, StringBuilder sb)
           throws IOException {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "Shift-JIS") )) {
           String line;
           while ((line = reader.readLine()) != null)
             sb.append(line).append("\n");

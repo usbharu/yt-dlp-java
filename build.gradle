@@ -20,7 +20,7 @@ test {
 }
 
 application {
-    mainClassName = 'MainKt'
+    mainClassName = 'io.github.usbharu.ytdlp.Main'
 }
 
 gitRelease {

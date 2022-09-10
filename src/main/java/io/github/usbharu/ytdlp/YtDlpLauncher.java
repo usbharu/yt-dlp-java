@@ -52,4 +52,11 @@ public class YtDlpLauncher {
     processBroker.execute();
     return processBroker.getStdout();
   }
+
+  public static LongProcessBroker runLong(String option,ProcessStreamChangeEventListener listener){
+    LongProcessBroker longProcessBroker = new LongProcessBroker(("./"+ytDlpFile().getPath()+"  "+option).split("  "));
+    longProcessBroker.addProcessStreamChangeEventListener(listener);
+    longProcessBroker.execute();
+    return longProcessBroker;
+  }
 }
