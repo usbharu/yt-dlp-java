@@ -10,6 +10,6 @@ public class YtDlp {
 
   public static void execute(YtDlpOption options,ProcessStreamChangeEventListener listener){
     YtDlpLauncher.downloadYtDlp();
-    YtDlpLauncher.runLong(options.getStringBuilder() + "  " + options.getUrl(),listener);
+    YtDlpLauncher.runLong(options.getStringBuilder() + options.getUrl(),listener);
   }
 }
